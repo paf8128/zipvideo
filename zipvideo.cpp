@@ -6,10 +6,10 @@ int main()
 {
 	string fi;
 	string fo;
-	cout << "ÊäÈëÔ­ÎÄ¼þÃû£º";
+	cout << "è¾“å…¥åŽŸæ–‡ä»¶å(Input)ï¼š";
 	cin >> fi;
 	eatline();
-	cout << "ÊäÈë×ª»»ºóÎÄ¼þÃû£º";
+	cout << "è¾“å…¥è½¬æ¢åŽæ–‡ä»¶å(Output)ï¼š";
 	cin >> fo;
 	string command =  "ffmpeg.exe -i "+fi+" -r 10 -pix_fmt yuv420p -vcodec libx264 -preset  veryslow -profile:v baseline -crf 23 -acodec aac -b:a 32k -strict -5 "+fo;
 	system(command.c_str());
